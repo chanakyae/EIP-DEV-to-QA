@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+</MAP>
+
+<LOOP NAME="a" TIMEOUT="" IN-ARRAY="/Orders">
+  <COMMENT>label a</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+</MAP>
+
+<LOOP NAME="b" TIMEOUT="" IN-ARRAY="/Orders/Items">
+  <COMMENT>label b</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+</MAP>
+
+<LOOP NAME="c" TIMEOUT="" IN-ARRAY="/Orders/Items/Parts">
+  <COMMENT>label c</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="STANDALONE">
+</MAP>
+
+<SEQUENCE NAME="d" TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>exit on failure--label d</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/ExitFrom">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<EXIT NAME="loop" FROM="$loop" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT>loop</COMMENT>
+</EXIT>
+
+<EXIT NAME="label" FROM="b" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT>label b</COMMENT>
+</EXIT>
+
+<EXIT NAME="flow" FROM="$flow" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT>flow</COMMENT>
+</EXIT>
+</BRANCH>
+
+<MAP MODE="STANDALONE">
+</MAP>
+
+<EXIT FROM="$parent" SIGNAL="SUCCESS" FAILURE-MESSAGE="">
+  <COMMENT>parent</COMMENT>
+</EXIT>
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+</MAP>
+</SEQUENCE>
+</LOOP>
+</LOOP>
+</LOOP>
+</FLOW>

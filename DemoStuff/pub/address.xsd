@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:element name="Address" type="addressType"/>
+
+<xsd:complexType name="addressType">
+   <xsd:sequence>
+      <xsd:element name="Attention" type="xsd:string"/>
+      <xsd:element name="Addr1" type="xsd:string"/>
+      <xsd:element name="Addr2" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      <xsd:element name="City" type="xsd:string"/>
+      <xsd:element name="State" type="stateType"/>
+      <xsd:element name="Zip" type="zipCodeType"/>
+   </xsd:sequence>
+</xsd:complexType>	
+	
+<xsd:simpleType name="zipCodeType">
+   <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[0-9]{5}(-[0-9]{4})?"/>
+   </xsd:restriction>		
+</xsd:simpleType>
+
+<xsd:simpleType name="stateType">
+   <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="AL"/>
+      <xsd:enumeration value="AR"/>
+      <xsd:enumeration value="VA"/>
+      <xsd:enumeration value="TX"/>
+      <xsd:enumeration value="FL"/>
+      <!-- etc -->
+   </xsd:restriction>
+</xsd:simpleType>	
+
+</xsd:schema>

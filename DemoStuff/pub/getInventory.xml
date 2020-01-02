@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.data.ISMemDataImpl">
+    <value name="Supplier">Acme's Pots</value>
+    <array name="Items" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="Description">Copper Pots</value>
+        <value name="Quantity">10</value>
+        <value name="UnitPrice">25</value>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="Description">Tin Pans</value>
+        <value name="Quantity">3</value>
+        <value name="UnitPrice">10</value>
+      </record>
+    </array>
+  </record>
+</IDataXMLCoder>

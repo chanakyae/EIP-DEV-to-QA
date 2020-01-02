@@ -1,0 +1,48 @@
+<HTML>
+<BODY>
+<FORM action="http://localhost:5555/invoke/bpi4dev.samples/sendRegistration" method=post>
+
+<H1>BPI for Developers Student Registry</H1>
+<BR><BR>
+
+<TABLE>
+   <TR>
+      <TD>Name
+      </TD>
+      <TD><INPUT type="text" size=30 name="studentName">
+      </TD>
+   </TR>
+   <TR>
+      <TD>Company
+      </TD>
+      <TD><INPUT type="text" size=30 name="company">
+      </TD>
+   </TR>
+   <TR>
+      <TD>Email Address
+      </TD>
+      <TD><INPUT type="text" size=30 name="email">
+      </TD>
+   </TR>
+   <TR>
+      <TD>Instructor IP
+      </TD>
+      <TD><INPUT type="text" size=30 name="ipAddress">
+      </TD>
+   </TR>
+  <TR>
+      <TD>Instructor Port
+      </TD>
+      <TD><INPUT type="text" size=30 name="port" value="5555">
+      </TD>
+   </TR>
+</TABLE><BR clear="all">
+<TABLE>
+  <TR>
+    <TD><INPUT type=Submit name="Submit" value=Submit>
+    </TD>
+  </TR>
+</TABLE><BR clear="all">
+<INPUT type=hidden name="user" value="Administrator">
+<INPUT type=hidden name="pass" value="manage">
+</FORM></BODY></HTML>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <record name="record" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_nsName">demo.stuff.webService.consumer.averageWScons_.docTypes:docTypeRef_tns_Output</value>
+    <value name="node_pkg">DemoStuff</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Count</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Sum</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">Average</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <record name="schemaType" javaclass="com.wm.util.Values">
+      <value name="xmlns">http://sagbase.eur.ad.sag/demo.stuff.webService.producer:averageWSprod</value>
+      <value name="ncName">Output</value>
+    </record>
+    <value name="schemaDomain">3317e978bbb59cca14c74627b47</value>
+    <value name="schemaRegistered">true</value>
+    <value name="docTypeDomain">96c4e080b3071e538ae0bd9c445e3f25</value>
+    <value name="originURI">http://sagbase.eur.ad.sag:5555/ws/demo.stuff.webService.producer:averageWSprod?WSDL</value>
+    <value name="modifiable">false</value>
+  </record>
+</Values>

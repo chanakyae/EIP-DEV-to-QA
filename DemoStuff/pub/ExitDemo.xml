@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<IDataXMLCoder version="1.0">
+  <record javaclass="com.wm.util.Values">
+    <array name="Orders" type="record" depth="1">
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="Company">Acme Hammer</value>
+        <array name="Items" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="Name">Drill</value>
+            <array name="Parts" type="record" depth="1">
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">bit</value>
+                <value name="Quantity">3</value>
+              </record>
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">power cord</value>
+                <value name="Quantity">1</value>
+              </record>
+            </array>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="Name">Saw</value>
+            <array name="Parts" type="record" depth="1">
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">blades</value>
+                <value name="Quantity">6</value>
+              </record>
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">power cord</value>
+                <value name="Quantity">2</value>
+              </record>
+            </array>
+          </record>
+        </array>
+      </record>
+      <record javaclass="com.wm.data.ISMemDataImpl">
+        <value name="Company">Robby's Robots</value>
+        <array name="Items" type="record" depth="1">
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="Name">Oscar</value>
+            <array name="Parts" type="record" depth="1">
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">Motors</value>
+                <value name="Quantity">3</value>
+              </record>
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">Remote Controls</value>
+                <value name="Quantity">1</value>
+              </record>
+            </array>
+          </record>
+          <record javaclass="com.wm.data.ISMemDataImpl">
+            <value name="Name">Grouch</value>
+            <array name="Parts" type="record" depth="1">
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">Voice Boxes</value>
+                <value name="Quantity">1</value>
+              </record>
+              <record javaclass="com.wm.data.ISMemDataImpl">
+                <value name="SKU">Buttons</value>
+                <value name="Quantity">5</value>
+              </record>
+            </array>
+          </record>
+        </array>
+      </record>
+    </array>
+    <value name="ExitFrom">label</value>
+  </record>
+</IDataXMLCoder>

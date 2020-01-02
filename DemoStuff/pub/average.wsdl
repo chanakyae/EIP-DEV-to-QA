@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<wsdl:definitions name="http___localhost_demoV7_webService" targetNamespace="http://localhost/"
+			xmlns:webM="http://www.webMethods.com/noNamespace/"
+			xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+			xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+			xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+			xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+			xmlns:tns="http://localhost/"
+			xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<wsdl:types>
+		
+<xsd:schema
+            targetNamespace="http://www.webMethods.com/noNamespace/"
+            xmlns="http://www.webMethods.com/noNamespace/"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+            xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" >
+            <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/" schemaLocation="http://schemas.xmlsoap.org/soap/encoding/"/>
+	<xsd:complexType name="Numbers">
+		<xsd:complexContent>
+			<xsd:restriction base="SOAP-ENC:Array">
+				<xsd:attribute ref="SOAP-ENC:arrayType" wsdl:arrayType="xsd:string[]"/>
+			</xsd:restriction>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="averageInput">
+		<wsdl:part name="Numbers" type="webM:Numbers"/>
+	</wsdl:message>
+	
+	<wsdl:message name="averageOutput">
+		<wsdl:part name="Count" type="xsd:string"/>
+		<wsdl:part name="Sum" type="xsd:string"/>
+		<wsdl:part name="Average" type="xsd:string"/>
+	</wsdl:message>
+	<wsdl:portType name="http___localhost_demoV7_webServicePortType">
+		<wsdl:operation name="average">
+			<wsdl:input message="tns:averageInput"/>
+			<wsdl:output message="tns:averageOutput"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="http___localhost_demoV7_webServiceBinding" type="tns:http___localhost_demoV7_webServicePortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+		<wsdl:operation name="average">
+			<soap:operation soapAction=""/>
+			<wsdl:input>
+				<soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/demoV7.webService" use="encoded"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/demoV7.webService" use="encoded"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="http___localhost_demoV7_webServiceService">
+		<wsdl:port name="http___localhost_demoV7_webServicePort0" binding="tns:http___localhost_demoV7_webServiceBinding">
+			<soap:address location="http://localhost:5555/soap/rpc"/>
+		</wsdl:port>
+	</wsdl:service>
+	</wsdl:definitions>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NirvanaRealm name="umserver" exportDate="2015-04-01-04:00" comment="Realm configuration from umserver">
+    <ChannelSet>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DSa" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DSb" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DScreditCheck" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DScustReply" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DScustReq" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DScustomer" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+        <ChannelEntry>
+            <ChannelAttributesEntry name="DSorder" TTL="0" capacity="0" EID="0" clusterWide="false" jmsEngine="true" mergeEngine="false" type="MIXED_TYPE"/>
+            <StorePropertiesEntry PerformAutomaticMaintenance="true"/>
+        </ChannelEntry>
+    </ChannelSet>
+</NirvanaRealm>

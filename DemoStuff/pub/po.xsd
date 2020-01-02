@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<xsd:include schemaLocation="address.xsd"/>
+
+<xsd:element name="purchaseOrder" type="POType"/>
+
+<xsd:complexType name="POType">
+   <xsd:sequence>
+      <xsd:element name="header" type="POHeaderType"/>
+      <xsd:element name="details" type="POBodyType"/>
+   </xsd:sequence>
+   <xsd:attribute name="orderDate" type="xsd:date"/>
+</xsd:complexType>
+
+<xsd:complexType name="POHeaderType">
+   <xsd:sequence>
+      <xsd:element name="PONumber" type="xsd:string"/>
+      <xsd:element name="shipTo" type="addressType"/>
+      <xsd:element name="billTo" type="addressType"/>
+   </xsd:sequence>
+</xsd:complexType>
+	
+<xsd:complexType name="POBodyType">
+   <xsd:sequence>
+      <xsd:element name="totalCost" type="xsd:decimal"/>
+      <xsd:element name="orderLineItems" type="itemType" minOccurs="0" maxOccurs="unbounded"/>
+   </xsd:sequence>
+</xsd:complexType>     	
+  
+<xsd:complexType name="itemType">
+   <xsd:sequence>
+      <xsd:element name="unitCost" type="xsd:decimal"/>              
+      <xsd:element name="desc" type="xsd:string"/>
+      <xsd:element name="supplierPartID" type="xsd:string"/>                               
+      <xsd:element name="quantity" type="xsd:positiveInteger"/>
+   </xsd:sequence>
+</xsd:complexType>
+ 
+</xsd:schema>
